@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Task 4 - Blog (React)</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:18px}
+    header{display:flex;justify-content:space-between;align-items:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+    .card{border:1px solid #e2e8f0;padding:12px;border-radius:8px}
+    .filters{margin-top:12px}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- React + Babel via CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel">
+    const posts = [
+      {id:1,title:'Intro to JS',category:'Tech',date:'2025-06-01',desc:'Basics of JS.'},
+      {id:2,title:'Travel Tips',category:'Travel',date:'2025-05-18',desc:'Pack light.'},
+      {id:3,title:'Best Recipes',category:'Food',date:'2025-04-10',desc:'Easy meals.'},
+      {id:4,title:'Advanced React',category:'Tech',date:'2025-07-02',desc:'Hooks and patterns.'}
+    ];
+    function App(){
+      const [q,setQ]=React.useState('');
+      const [cat,setCat]=React.useState('All');
+      const cats = ['All','Tech','Travel','Food'];
+      const filtered = posts.filter(p=> (cat==='All' || p.category===cat) && p.title.toLowerCase().includes(q.toLowerCase()));
+      return (
+        <div>
+          <header>
+            <h1>My Blog</h1>
+            <div>
+              <input placeholder="Search title..." value={q} onChange={e=>setQ(e.target.value)} />
+              <select value={cat} onChange={e=>setCat(e.target.value)}>
+                {cats.map(c=> <option key={c} value={c}>{c}</option>)}
+              </select>
+            </div>
+          </header>
+          <div className="grid">
+            {filtered.map(p=>(
+              <article className="card" key={p.id}>
+                <h3>{p.title}</h3>
+                <small>{p.category} • {p.date}</small>
+                <p>{p.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body>
+</html>

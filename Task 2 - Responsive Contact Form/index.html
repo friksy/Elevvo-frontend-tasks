@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Task 2 - Contact Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Contact Us</h1>
+    <form id="contact">
+      <label>Full Name <input name="name" required></label>
+      <label>Email Address <input type="email" name="email" required></label>
+      <label>Subject <input name="subject" required></label>
+      <label>Message <textarea name="message" rows="5" required></textarea></label>
+      <button type="submit">Submit</button>
+      <div id="status" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
