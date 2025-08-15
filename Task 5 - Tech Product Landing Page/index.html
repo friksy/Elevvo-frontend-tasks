@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task 5 - Tech Product Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container row">
+      <div class="logo">Task 5 - Tech Product Landing Page</div>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Stories</a>
+        <button id="theme-toggle" class="btn ghost">Toggle Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container grid-2">
+      <div class="hero-copy">
+        <h1>Ship faster. Work smarter.</h1>
+        <p class="lead">
+          The all-in-one platform to plan, track and launch your projects—built for modern teams.
+        </p>
+        <div class="actions">
+          <a href="#pricing" class="btn primary">Start Free</a>
+          <a href="#showcase" class="btn secondary">See how it works</a>
+        </div>
+      </div>
+
+      <!-- Product mockup (direct image URLs) -->
+      <div class="hero-media">
+        <img class="device device-laptop" alt="App on laptop"
+          src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80">
+        <img class="device device-phone" alt="App on phone"
+          src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80">
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section id="showcase" class="showcase">
+    <div class="container grid-2">
+      <div class="shot">
+        <img alt="Dashboard screenshot"
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80">
+      </div>
+      <div class="shot-copy">
+        <h2>Your command center</h2>
+        <p>Organize tasks, automate busywork and keep stakeholders aligned with real-time status and powerful views.</p>
+        <ul class="ticks">
+          <li>Kanban, List & Timeline views</li>
+          <li>Real-time collaboration & comments</li>
+          <li>One-click reports & progress charts</li>
+        </ul>
+        <a class="btn primary" href="#pricing">Try it Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Everything you need to launch</h2>
+      <div class="grid-3 cards">
+        <article class="card">
+          <img class="icon" alt="Speed"
+            src="https://cdn-icons-png.flaticon.com/512/159/159724.png">
+          <h3>Blazing fast</h3>
+          <p>Optimized architecture and snappy UI so your team never waits on the tool to catch up.</p>
+        </article>
+        <article class="card">
+          <img class="icon" alt="Security"
+            src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png">
+          <h3>Secure by default</h3>
+          <p>Role-based access, SSO and data encryption—enterprise-grade protection for peace of mind.</p>
+        </article>
+        <article class="card">
+          <img class="icon" alt="Reliability"
+            src="https://cdn-icons-png.flaticon.com/512/2910/2910762.png">
+          <h3>Rock-solid uptime</h3>
+          <p>Globally distributed infrastructure delivering 99.99% availability for mission-critical teams.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>Loved by product teams</h2>
+      <div class="grid-2 cards">
+        <figure class="card testimonial">
+          <img class="avatar" alt="Sarah avatar"
+            src="https://randomuser.me/api/portraits/women/44.jpg">
+          <blockquote>
+            “ProductivityPro helped us cut delivery time by 30%. The dashboard is ridiculously clear.”
+          </blockquote>
+          <figcaption>Sarah L. — Product Manager</figcaption>
+        </figure>
+        <figure class="card testimonial">
+          <img class="avatar" alt="Mark avatar"
+            src="https://randomuser.me/api/portraits/men/46.jpg">
+          <blockquote>
+            “Setup took minutes and our entire team adopted it within a week. Absolute game-changer.”
+          </blockquote>
+          <figcaption>Mark P. — Engineering Lead</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>Simple pricing</h2>
+      <div class="grid-3 cards">
+        <div class="card plan">
+          <h3>Free</h3>
+          <p class="price">$0<span>/mo</span></p>
+          <ul class="ticks">
+            <li>Personal projects</li>
+            <li>Up to 3 boards</li>
+            <li>Basic analytics</li>
+          </ul>
+          <a href="#" class="btn secondary">Get Free</a>
+        </div>
+        <div class="card plan featured">
+          <div class="badge">Most Popular</div>
+          <h3>Pro</h3>
+          <p class="price">$15<span>/mo</span></p>
+          <ul class="ticks">
+            <li>Unlimited boards</li>
+            <li>Advanced automations</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#" class="btn primary">Start Pro</a>
+        </div>
+        <div class="card plan">
+          <h3>Team</h3>
+          <p class="price">$30<span>/mo</span></p>
+          <ul class="ticks">
+            <li>Team permissions</li>
+            <li>SSO & audit logs</li>
+            <li>Admin controls</li>
+          </ul>
+          <a href="#" class="btn secondary">Start Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container row">
+      <div>
+        <h3>Ready to boost your delivery speed?</h3>
+        <p>Start your 14-day free trial. No credit card required.</p>
+      </div>
+      <a href="#pricing" class="btn invert">Create your workspace</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container row">
+      <p>© 2025 ProductivityPro</p>
+      <div class="socials">
+        <a href="#"><img alt="Twitter"
+          src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+        <a href="#"><img alt="LinkedIn"
+          src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></a>
+        <a href="#"><img alt="Facebook"
+          src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
